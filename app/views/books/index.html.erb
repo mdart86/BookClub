@@ -1,6 +1,10 @@
 <% @books.each do |book| %>
-    <p><%=book.title%>
+    <p><%= link_to book.title, book_path(book.id)%>
 <% end %>
 
 <%# We are looping through the books instance variable to display only the title %>
 <%# As you can see we have looped through passing book as a block within pipes then calling it to get the title from the instance variable %>
+<%# We are adding a link to the book title, the link_to method, passing in the book.title class method %>
+<%# Book_path is the path you want to go to, this is determined by the prefix, and then you pass in the book.id (depening which book is selected) %>
+<%# (book.id) is calling the ids within the book model class %>
+<%# we haven't used @book, instead we have used book.id because we are already inside of the each using the variable we have looped on. %>
