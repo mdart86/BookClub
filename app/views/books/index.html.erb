@@ -1,1 +1,6 @@
-<%= @books %>
+<% @books.each do |book| %>
+    <p><%=book.title%>
+<% end %>
+
+<%# We are looping through the books instance variable to display only the title %>
+<%# As you can see we have looped through passing book as a block within pipes then calling it to get the title from the instance variable %>
