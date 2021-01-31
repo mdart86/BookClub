@@ -1,2 +1,9 @@
-<h1><%=@book.title%></h1>
+<%= render partial: "book", locals: {book: @book} %>
+<%# render takes book partial and passes the information you want to render using locals %>
+<%# The information you want to pass in this case is stored in the instance variable %>
+
+
+
+
+<%# <h1><%=@book.title%><%# </h1> %> 
 <%# The reason why we haven't passed @books is because the info is coming from the controller based on the action method. %>
